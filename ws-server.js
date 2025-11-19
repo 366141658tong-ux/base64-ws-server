@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // ✅ 支援 JSON POST，最大 10MB
-app.use(bodyParser.json({ limit: "10mb" }));
+app.use(bodyParser.json({ limit: "50mb" }));
 
 // ✅ /audio 路由：同時支援 base64 或 data/mime/site 格式
 app.post("/audio", (req, res) => {
